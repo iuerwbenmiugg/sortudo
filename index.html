@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eleição 2026 · Transferência de votos</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div>
+        <h1>Eleição presidencial 2026: para onde foram os votos?</h1>
+        <p class="sub">
+          Resultados oficiais do TSE. Use os sliders para explorar como os eleitores de cada grupo
+          do 1º turno podem ter votado no 2º.
+        </p>
+      </div>
+      <div class="acoes">
+        <div class="modo" role="radiogroup" aria-labelledby="modo-rotulo">
+          <span id="modo-rotulo" class="modo-rotulo">2º turno</span>
+          <button type="button" role="radio" data-modo="livre" aria-checked="true"
+            title="Tudo manual: distribua os votos e tente casar o 2º turno">Livre</button>
+          <button type="button" role="radio" data-modo="fixo" aria-checked="false"
+            title="Toda mudança é compensada para o 2º turno bater exatamente com o oficial">Fixo</button>
+        </div>
+        <button id="restaurar" class="botao" type="button">Restaurar padrão</button>
+      </div>
+    </header>
+
+    <main class="painel">
+      <section class="coluna turno" id="turno1" aria-labelledby="t1-titulo">
+        <h2 id="t1-titulo">1º turno <span class="data">4 out 2026</span></h2>
+        <div id="lista-t1"></div>
+      </section>
+
+      <section class="coluna fluxos" aria-labelledby="fluxos-titulo">
+        <h2 id="fluxos-titulo">Transferências</h2>
+        <p class="dica" id="dica"></p>
+        <div id="grupos"></div>
+      </section>
+
+      <section class="coluna turno" id="turno2" aria-labelledby="t2-titulo">
+        <h2 id="t2-titulo">2º turno <span class="data">25 out 2026</span></h2>
+        <div id="lista-t2"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
